@@ -9,7 +9,7 @@ import WarrantyTermsSection from '@/sections/warranty/WarrantyTermsSection'
 
 export default function WarrantyPage() {
   return (
-    <div className="min-h-screen bg-[#f8f8f7] text-[#1f2937]">
+    <div className="min-h-screen bg-deep-dark text-white">
       <Header />
 
       <main>
