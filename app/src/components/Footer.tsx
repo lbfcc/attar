@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="border-t border-charcoal mt-10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-[#999999]">
-              © 2025 Attar Tyres. Все права защищены.
+              © 2026 Attar Tyres. Все права защищены.
             </p>
             <div className="flex gap-4 text-xs text-[#999999]">
               <span className="hover:text-white hover:underline cursor-pointer transition-colors">
