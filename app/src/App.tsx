@@ -9,6 +9,7 @@ import StoreLocatorSection from '@/sections/StoreLocatorSection'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WarrantyPage from '@/pages/WarrantyPage'
+import CatalogPage from '@/pages/CatalogPage'
 
 function HomePage() {
   return (
@@ -33,6 +34,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/warranty" element={<WarrantyPage />} />
+      <Route path="/catalog" element={<CatalogPage />} />
     </Routes>
   )
 }

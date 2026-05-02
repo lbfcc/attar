@@ -13,7 +13,7 @@ const products = [
     name: 'S01 Sport',
     type: 'Легковые',
     season: 'Летние',
-    price: 'от 15 000 ₽',
+    price: 'от 89 900 ₸',
     warranty: true,
     size: '185/65 R15 — 255/35 R20',
     speedRating: 'V (240 км/ч)',
@@ -24,7 +24,7 @@ const products = [
     name: 'S02 Ultra Sport',
     type: 'Легковые',
     season: 'Летние',
-    price: 'от 18 000 ₽',
+    price: 'от 109 900 ₸',
     warranty: true,
     size: '195/55 R16 — 275/30 R20',
     speedRating: 'W (270 км/ч)',
@@ -35,7 +35,7 @@ const products = [
     name: 'W01 Winter',
     type: 'Легковые',
     season: 'Зимние',
-    price: 'от 12 000 ₽',
+    price: 'от 74 900 ₸',
     warranty: false,
     size: '175/70 R14 — 245/45 R18',
     speedRating: 'T (190 км/ч)',
@@ -46,7 +46,7 @@ const products = [
     name: 'SUV01 All-Terrain',
     type: 'SUV',
     season: 'Всесезонные',
-    price: 'от 20 000 ₽',
+    price: 'от 124 900 ₸',
     warranty: true,
     size: '215/70 R16 — 275/55 R20',
     speedRating: 'H (210 км/ч)',
@@ -147,7 +147,7 @@ export default function PopularProductsSection() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <a
-              href="#popular"
+              href="/catalog"
               className="text-sm font-medium text-neon-orange hover:underline mt-2 sm:mt-0 inline-flex items-center gap-1"
             >
               Смотреть все
