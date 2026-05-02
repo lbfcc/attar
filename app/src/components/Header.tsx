@@ -1,21 +1,35 @@
 import { useState } from 'react'
+import { useLocation, useNavigate } from 'react-router'
 import { useScrollHeader } from '@/hooks/useScrollHeader'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Главная', href: '#hero' },
-  { label: 'О бренде', href: '#about' },
-  { label: 'Каталог', href: '#popular' },
+  { label: 'Расширенная гарантия', href: '/warranty' },
+  { label: 'Каталог', href: '/catalog' },
   { label: 'Где купить', href: '#stores' },
 ]
 
 export default function Header() {
   const scrolled = useScrollHeader(100)
+  const navigate = useNavigate()
+  const location = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setMobileOpen(false)
+
+    if (href.startsWith('/')) {
+      navigate(href)
+      return
+    }
+
+    if (location.pathname !== '/') {
+      navigate(`/${href}`)
+      return
+    }
+
     const el = document.querySelector(href)
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })

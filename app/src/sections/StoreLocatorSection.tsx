@@ -60,6 +60,14 @@ const allStores = [
 
 const cities = ['Все города', 'Алматы', 'Астана', 'Караганда', 'Шымкент']
 
+const cityMapQuery: Record<string, string> = {
+  'Все города': 'Kazakhstan tire shops',
+  Алматы: 'Almaty Kazakhstan tire shop',
+  Астана: 'Astana Kazakhstan tire shop',
+  Караганда: 'Karaganda Kazakhstan tire shop',
+  Шымкент: 'Shymkent Kazakhstan tire shop',
+}
+
 export default function StoreLocatorSection() {
   const [selectedCity, setSelectedCity] = useState('Все города')
   const cardsRef = useRef<HTMLDivElement>(null)
@@ -166,24 +174,16 @@ export default function StoreLocatorSection() {
             )}
           </div>
 
-          {/* Map placeholder */}
+          {/* Google Map */}
           <div className="lg:w-[50%] hidden lg:block">
-            <div className="w-full h-full min-h-[450px] bg-deep-dark rounded-2xl border border-dark-border flex flex-col items-center justify-center relative overflow-hidden">
-              {/* Grid pattern */}
-              <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                  backgroundSize: '40px 40px',
-                }}
+            <div className="w-full h-full min-h-[450px] rounded-2xl border border-dark-border overflow-hidden">
+              <iframe
+                title="Карта магазинов Attar"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(cityMapQuery[selectedCity])}&output=embed`}
+                className="w-full h-full min-h-[450px]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
-              <MapPin size={48} className="text-dark-border mb-4 relative z-10" />
-              <p className="text-sm text-[#999999] relative z-10">
-                {selectedCity === 'Все города' ? 'Все магазины' : selectedCity}
-              </p>
-              <p className="text-xs text-[#666666] mt-1 relative z-10">
-                {filteredStores.length} магазинов найдено
-              </p>
             </div>
           </div>
         </div>
