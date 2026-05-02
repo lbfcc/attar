@@ -3,7 +3,7 @@ export default function WarrantyModelsSection() {
     <section id="models" className="grid grid-cols-1 md:grid-cols-2">
       <div className="min-h-[320px]">
         <img
-          src="/images/family-car.jpg"
+          src="/assets/family.jpg"
           alt="Семья в автомобиле"
           className="h-full w-full object-cover"
         />

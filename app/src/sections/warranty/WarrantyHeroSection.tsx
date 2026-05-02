@@ -2,7 +2,7 @@ export default function WarrantyHeroSection() {
   return (
     <section className="relative overflow-hidden">
       <img
-        src="/images/warranty-hero.jpg"
+        src="/assets/warrantyback.jpg"
         alt="Расширенная гарантия Attar"
         className="h-[500px] w-full object-cover md:h-[620px]"
       />

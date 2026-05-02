@@ -17,7 +17,7 @@ export default function WarrantyContactSection() {
       </div>
       <div className="min-h-[320px]">
         <img
-          src="/images/contact-center.jpg"
+          src="/assets/contact-center.jpg"
           alt="Сотрудник контакт-центра"
           className="h-full w-full object-cover"
         />
